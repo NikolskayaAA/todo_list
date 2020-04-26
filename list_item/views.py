@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from list_item.models import ListItemModel
+from main.forms import ListForm
 from main.models import ListModel
 
 
@@ -15,3 +16,6 @@ def list_item_view(request, pk):
 
     }
     return render(request, 'list.html', context)
+
+
+

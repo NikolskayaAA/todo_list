@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Новый список</title>
       <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-      <link rel="stylesheet" href="static/css/save_list.css">
+      <link rel="stylesheet" href="/static/css/save_list.css">
   </head>
  <body>
     <div class="wrapper__auth">
@@ -15,8 +15,8 @@
           <div class="auth__column_right_form__header">
                Новый список
           </div>
-          <form class="auth_form_class" action="" id="auth_form" method="POST">
-              <input type="text" name="login" id="input_field_email-id" maxlength="128" required="">
+          <form class="auth_form_class" action="" id="auth_form" method="POST">{% csrf_token %}
+           {{ form }}
           </form>
           <div class="auth__column_right__form_footer">
             <label class="form_footer_button-submit">

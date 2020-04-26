@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'list_item',
-    'main.templatetags'
+    'main.templatetags',
+    'registration',
 
 
 ]

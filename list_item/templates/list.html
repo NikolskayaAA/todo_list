@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block name %}
-    <div class="table-data_table-header-item-1">День рождения</div>
+
+    <div class="table-data_table-header-item-1">{{ title }}</div>
+
 {% endblock %}
 
 {% block body %}
@@ -13,9 +15,9 @@
         <div class="table-data__table-row">
             <div class="table-row_table_cell-1">
                 {% if list.is_done %}
-                    {{ list.name }}
+                     <div class="is_done_text">{{ list.name }}</div>
                 {% else %}
-                    <div class="is_done_text">{{ list.name }}</div>
+                    {{ list.name }}
                 {% endif %}
             </div>
             <div class="buttons">
@@ -31,8 +33,8 @@
                 </div>
                 <div class="calendarik">
                     <a href='#'>
-                        {% if list.date %}
-                            {{ list.date }}
+                        {% if list.expare_date %}
+                            {{ list.expare_date }}
                         {% else %}
                             <img src=" /static/images/calendar.png" alt="calendar" width="26px" height="24px">
                         {% endif %}
